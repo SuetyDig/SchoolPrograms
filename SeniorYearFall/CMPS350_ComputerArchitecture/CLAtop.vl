@@ -1,0 +1,10 @@
+`include "fullAdder.vl"
+module CLAtop(
+	input a, b, cin,
+	output sum
+);
+fullAdder adder(a, b, cin, cout, sum);
+wire g, p, cout;
+assign p = a | b;
+assign g = a & b;
+endmodule

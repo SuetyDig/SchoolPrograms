@@ -1,0 +1,44 @@
+`include "CLA.vl"
+`include "xor.vl"
+`include "8bitshifter.vl"
+`include "selector.vl"
+`include "and.vl"
+`include "or.vl"
+
+module ALU;
+
+reg[7:0] a, b;	
+reg[2:0] op;
+wire[7:0] out;
+
+wire[7:0] addSum, shift, i, j, k;
+wire cout;
+
+CLA cla(a, b, op[0], op[0], cout, addSum);
+bitshifter shifter(a, b[2:0], shift);
+Xor x(a, b, i);
+And an(a, b, j);
+Or o(a, b, k);
+
+wire[7:0] carry0, carry1, carry2, carry3;
+selector sel0(shift, i, op[0], carry0);
+
+selector sel1(k, j, op[0], carry1);
+
+selector sel2(addSum, carry0, op[1], carry2);
+
+selector sel3(carry1, 1, op[1], carry3);
+
+selector sel4(carry2, carry3, op[2], out);
+initial
+	begin
+	$monitor($time, "a=%b, b=%b, op=%b, out=%b", a, b, op, out);
+	#10 a = 25; b = 30; op = 0;
+	#10 a = 30; b = 25; op = 1;
+	#10 a = 10; b = 3; op = 2;
+	#10 a = 15; b = 3; op = 3;
+	#10 a = 31; b = 12; op = 5;
+	#10 a = 12; b = 5; op = 4;
+	#10 $finish;
+	end
+endmodule

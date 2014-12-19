@@ -1,0 +1,7 @@
+module selector(
+	input[7:0] a,b,
+	input op,
+	output[7:0] z
+);
+assign z = (op)? b:a;
+endmodule

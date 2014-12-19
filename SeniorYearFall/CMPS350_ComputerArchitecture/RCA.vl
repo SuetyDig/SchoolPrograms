@@ -1,0 +1,35 @@
+`include "fullAdder.vl"
+module RCA;
+	reg cin;
+	reg[7:0]  a,b;
+
+
+wire cout;
+wire[7:0] sum;
+
+fullAdder fa0(a[0], b[0], cin);
+fullAdder fa1(a[1], b[1], fa0.cout);
+fullAdder fa2(a[2], b[2], fa1.cout);
+fullAdder fa3(a[3], b[3], fa2.cout);
+fullAdder fa4(a[4], b[4], fa3.cout);
+fullAdder fa5(a[5], b[5], fa4.cout);
+fullAdder fa6(a[6], b[6], fa5.cout);
+fullAdder fa7(a[7], b[7], fa6.cout);
+
+assign cout = fa7.cout;
+assign sum[0] = fa0.sum;
+assign sum[1] = fa1.sum;
+assign sum[2] = fa2.sum;
+assign sum[3] = fa3.sum;
+assign sum[4] = fa4.sum;
+assign sum[5] = fa5.sum;
+assign sum[6] = fa6.sum;
+assign sum[7] = fa7.sum;
+
+initial
+	   begin
+	   $monitor($time,, "a=%b, b=%b, cin=%b, cout=%b, sum=%b", a, b, cin, cout, sum);
+	   #10 a = 127; b = 0; cin = 0;
+	   end
+
+endmodule

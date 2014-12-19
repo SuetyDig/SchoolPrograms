@@ -1,0 +1,51 @@
+`include "CLAtop.vl"
+`include "CLAbot.vl"
+`include "mux.vl"
+
+module CLA(
+	input[7:0] a, b,
+	input c_in, op,
+	output cout,
+	output[7:0] sum
+);
+	wire[7:0] wiSum;
+	wire[7:0] wiMux;
+
+	mux m0(b[0], ~b[0], op, wiMux[0] );
+	mux m1(b[1], ~b[1], op, wiMux[1] );
+	mux m2(b[2], ~b[2], op, wiMux[2] );
+	mux m3(b[3], ~b[3], op, wiMux[3] );
+	mux m4(b[4], ~b[4], op, wiMux[4] );
+	mux m5(b[5], ~b[5], op, wiMux[5] );
+	mux m6(b[6], ~b[6], op, wiMux[6] );
+	mux m7(b[7], ~b[7], op, wiMux[7] );
+
+	CLAtop top0(a[0], wiMux[0], low0.cin, wiSum[0]);
+	CLAtop top1(a[1], wiMux[1], (top0.g | (top0.p & top0.cin)), wiSum[1]);
+	CLAtop top2(a[2], wiMux[2], high1.cin, wiSum[2]);
+	CLAtop top3(a[3], wiMux[3], (top2.g | (top2.p & top2.cin)), wiSum[3]);
+	CLAtop top4(a[4], wiMux[4], low2.cin, wiSum[4]);
+	CLAtop top5(a[5], wiMux[5], (top4.g | (top4.p & top4.cin)), wiSum[5]);
+	CLAtop top6(a[6], wiMux[6], high3.cin, wiSum[6]);
+	CLAtop top7(a[7], wiMux[7], (top6.g | (top6.p & top6.cin)), wiSum[7]);
+
+	CLAbot low0(top1.g, top1.p, top0.g, top0.p, low4.cin);
+	CLAbot high1(top3.g, top3.p, top2.g, top2.p, (low0.g | (low0.p & low0.cin)) );
+	CLAbot low2(top5.g, top5.p, top4.g, top4.p, high5.cin);
+	CLAbot high3(top7.g, top7.p, top6.g, top6.p, (low2.g | (low2.p & low2.cin)) );
+	CLAbot low4(high1.g, high1.p, low0.g, low0.p, low6.cin);
+	CLAbot high5(high3.g, high3.p, low2.g, low2.p, (low4.g | (low4.p & low4.cin)) );
+	CLAbot low6(high5.g, high5.p, low4.g, low4.p, c_in);
+
+	assign sum[0] = wiSum[0];
+	assign sum[1] = wiSum[1];
+	assign sum[2] = wiSum[2];
+	assign sum[3] = wiSum[3];
+	assign sum[4] = wiSum[4];
+	assign sum[5] = wiSum[5];
+	assign sum[6] = wiSum[6];
+	assign sum[7] = wiSum[7];
+
+	assign cout = top7.adder.cout;	
+
+endmodule

@@ -1,0 +1,37 @@
+R64807129	Barrett, Matthew B.	barrettm3@scranton.edu	Freshman	Computer Science
+R70401001	Birchard, Kristy J.	birchardk2@scranton.edu	Freshman	Media Information Tech
+R78570557	Dermont, Marcus J.	dermontm2@scranton.edu	Freshman	Computer Science
+R98739625	Dew, David E.	dewd2@scranton.edu	Freshman	Computer Science
+R33105469	Foster, Stephen A.	fosters3@scranton.edu	Freshman	Computer Science
+R96170044	Law, Robert W.	lawr2@scranton.edu	Freshman	Computer Science
+R43646240	Morrow, William E.	morroww2@scranton.edu	Freshman	Computer Science
+R23239135	Pfund, Rory A.	pfundr2@scranton.edu	Freshman	Computer Science
+R09802246	Wilson, Jameeka	wilsonj4@scranton.edu	Freshman	Computer Science
+R37368774	Alfonso, Matthew J.	alfonsom2@scranton.edu	Freshman	Computer Science
+R90557862	Borst, Steven A.	borsts2@scranton.edu	Freshman	Computer Science
+R67855835	Damiano, Christopher	damianoc4@scranton.edu	Freshman	Computer Science
+R79272461	Donato, Derek D.	donatod2@scranton.edu	Freshman	Computer Information Systems
+R90872193	Franchak, Stephen D.	franchaks2@scranton.edu	Freshman	Computer Science
+R78680420	Seemiller, Joseph R.	seemillerj2@scranton.edu	Freshman	Computer Science
+R04464721	Shabani, Kushtrim	shabanik2@scranton.edu	Freshman	Computer Science
+R75891114	Steinmetz, Eric P.	steinmetze3@scranton.edu	Freshman	Computer Science
+R03555297	Verchuk, Marissa C.	verchukm2@scranton.edu	Freshman	Computer Science
+R17388916	Zampano, Steven G.	zampanos2@scranton.edu	Freshman	Media Information Tech
+R54940796	Alatawi, Bandar M.	alatawib2@scranton.edu	Sophomore	Computer Science
+R84033203	Barrett, Elizabeth G.	barrette6@scranton.edu	Sophomore	Computer Science
+R72293091	Barrett, Patrick T.	barrettp5@scranton.edu	Sophomore	Computer Information Systems
+R66058350	Chiodo, Alex J.	chiodoa2@scranton.edu	Sophomore	Computer Information Systems
+R91159058	Coppa, Peter C.	coppap2@scranton.edu	Junior	Computer Engineering
+R38073730	Cummings, Christopher R.	cummingsc4@scranton.edu	Sophomore	Computer Science
+R43960571	Frey, Raymond	freyr2@scranton.edu	Junior	Computer Information Systems
+R34063721	Grieb, Sean R.	griebs2@scranton.edu	Freshman	Computer Information Systems
+R34994507	Hogan, John T.	hoganj4@scranton.edu	Sophomore	Computer Information Systems
+R22387695	Kearns, Justin S.	kearnsj3@scranton.edu	Sophomore	Computer Information Systems
+R15432739	Locks, Kyle R.	locksk2@scranton.edu	Senior	Computer Science
+R80780030	Orchard, Raymond J.	orchardr2@scranton.edu	Senior	Electrical Engineering
+R58322144	Wenke, Paul T.	wenkep3@scranton.edu	Junior	Media Information Tech
+R71350098	Behr, Kevin M.	behrk2@scranton.edu	Graduate	Software Engineering
+R33584595	Dasari, Hepsiba V.	dasarih2@scranton.edu	Graduate	Software Engineering
+R15582275	Peddachappali, Sai K.	peddachapps2@scranton.edu	Graduate	Software Engineering
+R83016968	Shamim, Shahana	shamims2@scranton.edu	Graduate	Software Engineering
+R69335938	Sudhakara, Suhasini	sudhakaras2@scranton.edu	Graduate	Software Engineering

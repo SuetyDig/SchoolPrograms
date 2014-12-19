@@ -1,0 +1,13 @@
+module CLAbot(
+	input gh, 
+	input ph, 
+	input gl, 
+	input pl,
+	input cin
+);
+output p,g;
+
+assign g = gh | (ph & gl);
+assign p = ph & pl;
+
+endmodule

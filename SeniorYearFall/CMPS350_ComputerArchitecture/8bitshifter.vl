@@ -1,0 +1,38 @@
+
+module bitshifter(
+	input[7:0] a,
+	input[2:0] b,
+	output[7:0] z 
+);
+
+wire[7:0] wi0;
+
+mux m0(a[0], a[4], b[2], wi0[0]);
+mux m1(a[1], a[5], b[2], wi0[1]);
+mux m2(a[2], a[6], b[2], wi0[2]);
+mux m3(a[3], a[7], b[2], wi0[3]);
+mux m4(a[4], a[0], b[2], wi0[4]);
+mux m5(a[5], a[1], b[2], wi0[5]);
+mux m6(a[6], a[2], b[2], wi0[6]);
+mux m7(a[7], a[3], b[2], wi0[7]);
+
+wire[7:0] wi1;
+mux m8(wi0[0], wi0[6], b[1], wi1[0]);
+mux m9(wi0[1], wi0[7], b[1], wi1[1]);
+mux m10(wi0[2], wi0[0], b[1], wi1[2]);
+mux m11(wi0[3], wi0[1], b[1], wi1[3]);
+mux m12(wi0[4], wi0[2], b[1], wi1[4]);
+mux m13(wi0[5], wi0[3], b[1], wi1[5]);
+mux m14(wi0[6], wi0[4], b[1], wi1[6]);
+mux m15(wi0[7], wi0[6], b[1], wi1[7]);
+
+mux m16(wi1[0], wi1[7], b[0], z[0]);
+mux m17(wi1[1], wi1[0], b[0], z[1]);
+mux m18(wi1[2], wi1[1], b[0], z[2]);
+mux m19(wi1[3], wi1[2], b[0], z[3]);
+mux m20(wi1[4], wi1[3], b[0], z[4]);
+mux m21(wi1[5], wi1[4], b[0], z[5]);
+mux m22(wi1[6], wi1[5], b[0], z[6]);
+mux m23(wi1[7], wi1[6], b[0], z[7]);
+
+endmodule

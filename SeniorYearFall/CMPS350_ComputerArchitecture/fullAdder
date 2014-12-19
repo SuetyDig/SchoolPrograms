@@ -1,0 +1,95 @@
+#! /usr/local/Cellar/icarus-verilog/0.9.7/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7feb40404670 .scope module, "fullAdder" "fullAdder" 2 1;
+ .timescale 0 0;
+L_0x7feb40414e40 .functor AND 1, v0x7feb40415360_0, v0x7feb40415130_0, C4<1>, C4<1>;
+L_0x7feb40415420 .functor AND 1, v0x7feb404152e0_0, v0x7feb40415130_0, C4<1>, C4<1>;
+L_0x7feb40415670 .functor OR 1, L_0x7feb40414e40, L_0x7feb40415420, C4<0>, C4<0>;
+L_0x7feb40415770 .functor AND 1, v0x7feb404152e0_0, v0x7feb40415360_0, C4<1>, C4<1>;
+L_0x7feb40415870 .functor OR 1, L_0x7feb40415670, L_0x7feb40415770, C4<0>, C4<0>;
+L_0x7feb40415950 .functor NOT 1, v0x7feb40415360_0, C4<0>, C4<0>, C4<0>;
+L_0x7feb404159b0 .functor AND 1, v0x7feb404152e0_0, L_0x7feb40415950, C4<1>, C4<1>;
+L_0x7feb40415a90 .functor NOT 1, v0x7feb40415130_0, C4<0>, C4<0>, C4<0>;
+L_0x7feb40415af0 .functor AND 1, L_0x7feb404159b0, L_0x7feb40415a90, C4<1>, C4<1>;
+L_0x7feb40415c20 .functor NOT 1, v0x7feb404152e0_0, C4<0>, C4<0>, C4<0>;
+L_0x7feb40415d00 .functor NOT 1, v0x7feb40415360_0, C4<0>, C4<0>, C4<0>;
+L_0x7feb404157f0 .functor AND 1, L_0x7feb40415c20, L_0x7feb40415d00, C4<1>, C4<1>;
+L_0x7feb40415e40 .functor AND 1, L_0x7feb404157f0, v0x7feb40415130_0, C4<1>, C4<1>;
+L_0x7feb40415de0 .functor OR 1, L_0x7feb40415af0, L_0x7feb40415e40, C4<0>, C4<0>;
+L_0x7feb40416010 .functor AND 1, v0x7feb404152e0_0, v0x7feb40415360_0, C4<1>, C4<1>;
+L_0x7feb404160f0 .functor AND 1, L_0x7feb40416010, v0x7feb40415130_0, C4<1>, C4<1>;
+L_0x7feb40416190 .functor OR 1, L_0x7feb40415de0, L_0x7feb404160f0, C4<0>, C4<0>;
+L_0x7feb40416300 .functor AND 1, v0x7feb404152e0_0, v0x7feb40415360_0, C4<1>, C4<1>;
+L_0x7feb40416070 .functor NOT 1, v0x7feb40415130_0, C4<0>, C4<0>, C4<0>;
+L_0x7feb40416400 .functor AND 1, L_0x7feb40416300, L_0x7feb40416070, C4<1>, C4<1>;
+L_0x7feb40416480 .functor OR 1, L_0x7feb40416190, L_0x7feb40416400, C4<0>, C4<0>;
+v0x7feb40404420_0 .net *"_s0", 0 0, L_0x7feb40414e40; 1 drivers
+v0x7feb404146e0_0 .net *"_s10", 0 0, L_0x7feb40415950; 1 drivers
+v0x7feb40414770_0 .net *"_s12", 0 0, L_0x7feb404159b0; 1 drivers
+v0x7feb404147f0_0 .net *"_s14", 0 0, L_0x7feb40415a90; 1 drivers
+v0x7feb40414880_0 .net *"_s16", 0 0, L_0x7feb40415af0; 1 drivers
+v0x7feb40414940_0 .net *"_s18", 0 0, L_0x7feb40415c20; 1 drivers
+v0x7feb404149d0_0 .net *"_s2", 0 0, L_0x7feb40415420; 1 drivers
+v0x7feb40414a90_0 .net *"_s20", 0 0, L_0x7feb40415d00; 1 drivers
+v0x7feb40414b10_0 .net *"_s22", 0 0, L_0x7feb404157f0; 1 drivers
+v0x7feb40414be0_0 .net *"_s24", 0 0, L_0x7feb40415e40; 1 drivers
+v0x7feb40414c60_0 .net *"_s26", 0 0, L_0x7feb40415de0; 1 drivers
+v0x7feb40414d40_0 .net *"_s28", 0 0, L_0x7feb40416010; 1 drivers
+v0x7feb40414dc0_0 .net *"_s30", 0 0, L_0x7feb404160f0; 1 drivers
+v0x7feb40414eb0_0 .net *"_s32", 0 0, L_0x7feb40416190; 1 drivers
+v0x7feb40414f30_0 .net *"_s34", 0 0, L_0x7feb40416300; 1 drivers
+v0x7feb40415030_0 .net *"_s36", 0 0, L_0x7feb40416070; 1 drivers
+v0x7feb404150b0_0 .net *"_s38", 0 0, L_0x7feb40416400; 1 drivers
+v0x7feb40414fb0_0 .net *"_s4", 0 0, L_0x7feb40415670; 1 drivers
+v0x7feb404151c0_0 .net *"_s6", 0 0, L_0x7feb40415770; 1 drivers
+v0x7feb404152e0_0 .var "a", 0 0;
+v0x7feb40415360_0 .var "b", 0 0;
+v0x7feb40415130_0 .var "cin", 0 0;
+v0x7feb40415490_0 .net "cout", 0 0, L_0x7feb40415870; 1 drivers
+v0x7feb40415240_0 .net "sum", 0 0, L_0x7feb40416480; 1 drivers
+    .scope S_0x7feb40404670;
+T_0 ;
+    %vpi_call 2 14 "$monitor", $time, " ", "a=%b, b=%b, cin=%b, sum=%b, cout=%b", v0x7feb404152e0_0, v0x7feb40415360_0, v0x7feb40415130_0, v0x7feb40415240_0, v0x7feb40415490_0;
+    %delay 10, 0;
+    %set/v v0x7feb404152e0_0, 0, 1;
+    %set/v v0x7feb40415360_0, 0, 1;
+    %set/v v0x7feb40415130_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x7feb404152e0_0, 0, 1;
+    %set/v v0x7feb40415360_0, 0, 1;
+    %set/v v0x7feb40415130_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x7feb404152e0_0, 0, 1;
+    %set/v v0x7feb40415360_0, 1, 1;
+    %set/v v0x7feb40415130_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x7feb404152e0_0, 0, 1;
+    %set/v v0x7feb40415360_0, 1, 1;
+    %set/v v0x7feb40415130_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x7feb404152e0_0, 1, 1;
+    %set/v v0x7feb40415360_0, 0, 1;
+    %set/v v0x7feb40415130_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x7feb404152e0_0, 1, 1;
+    %set/v v0x7feb40415360_0, 0, 1;
+    %set/v v0x7feb40415130_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x7feb404152e0_0, 1, 1;
+    %set/v v0x7feb40415360_0, 1, 1;
+    %set/v v0x7feb40415130_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x7feb404152e0_0, 1, 1;
+    %set/v v0x7feb40415360_0, 1, 1;
+    %set/v v0x7feb40415130_0, 1, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "fullAdder.vl";

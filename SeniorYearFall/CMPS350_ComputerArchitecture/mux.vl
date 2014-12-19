@@ -1,0 +1,6 @@
+module mux(
+	input a, b, s,
+	output z
+);
+assign z = (a & ~s) | (b & s);
+endmodule
